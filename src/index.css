@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+.health-card {
+  @apply bg-white rounded-2xl shadow-lg p-6 transition-all duration-300;
+}
+.health-card:hover {
+  @apply shadow-xl;
+  transform: translateY(-2px);
+}
+
+.tip-card {
+  @apply rounded-xl p-4 border border-gray-100 shadow-sm;
+  background: linear-gradient(to bottom right, white, #f9fafb);
+}
+
+.metric-badge {
+  @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.nav-link {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 transition-all duration-200;
+}
+.nav-link:hover {
+  @apply text-indigo-600;
+  background: rgba(255,255,255,0.8);
+}
+.nav-link.active {
+  @apply bg-white text-indigo-600 shadow-sm font-semibold;
+}
+
+.section-title {
+  @apply text-xl font-bold text-gray-800 mb-4 flex items-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white px-6 rounded-xl font-medium shadow-sm;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+.btn-primary:hover {
+  @apply bg-indigo-700;
+}
+
+.progress-bar {
+  @apply h-3 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full rounded-full;
+  transition: all 500ms;
+}
+
+.video-embed {
+  @apply w-full rounded-xl overflow-hidden shadow-lg;
+  aspect-ratio: 16/9;
+}
+
+.chat-bubble-user {
+  @apply bg-indigo-600 text-white rounded-2xl px-4 py-3 ml-auto;
+  border-bottom-right-radius: 4px;
+  max-width: 80%;
+}
+
+.chat-bubble-bot {
+  @apply bg-white text-gray-800 rounded-2xl px-4 py-3 shadow-sm border border-gray-100;
+  border-bottom-left-radius: 4px;
+  max-width: 80%;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+html { scroll-behavior: smooth; }
